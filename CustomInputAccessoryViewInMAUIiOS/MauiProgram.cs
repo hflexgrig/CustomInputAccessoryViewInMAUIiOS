@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls;
+#if IOS
+using CustomInputAccessoryViewInMAUIiOS.Platforms.iOS.Handlers;
+#endif
 
 namespace CustomInputAccessoryViewInMAUIiOS;
 
@@ -13,7 +17,15 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			}).Services
+			})
+#if IOS
+			.ConfigureMauiHandlers(handlers =>
+			{
+				handlers.AddHandler<Editor, AccessoryEditorHandler>();
+				handlers.AddHandler<HybridWebView, AccessoryHybridWebViewHandler>();
+			})
+#endif
+			.Services
 			.AddHybridWebViewDeveloperTools();
 
 #if DEBUG
