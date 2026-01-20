@@ -1,6 +1,6 @@
 buymeacoffee.com/hakobgrigoryan
 
-<img width="700" height="700" alt="qr-code" src="https://github.com/user-attachments/assets/6619eb0a-9d99-4dc0-9afa-3be56dbb6f46" />
+<img width="220" height="220" alt="qr-code" src="https://github.com/user-attachments/assets/6619eb0a-9d99-4dc0-9afa-3be56dbb6f46" />
 
 
 How to Customize InputAccessoryView on iOS
